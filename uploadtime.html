@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">     
+        $(document).ready(function(){
+      	var t=null;//显示时间
+        t=setTimeout(time,1000);//开始执行
+      	function time(){
+      		clearTimeout(t);//清除定时器
+      		dt=new Date();
+      		var h=checkTime(dt.getHours());
+      		var i=checkTime(dt.getMinutes());
+      		var s=checkTime(dt.getSeconds());
+      		document.getElementById("showtime").innerHTML="现在的时间为 ："+h+":"+i+":"+s;
+            t=setTimeout(time,1000);//设定定时器，循环执行
+      	}
+      	function checkTime(i){
+	        if (i<10) {
+	            i = "0" + i;
+	        }
+	        return i
+        }
+      })
+    </script>
+</head>
+<body>
+<div>
+	<span id="showtime"></span>
+	<a href="javascript:location.replace(location.href);" title="刷新">刷新时间</a>
+</div>
+</body>
+</html>

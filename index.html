@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  /*#main{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+  }*/
+  #left{
+    width: 160px;
+    background-color: red;
+    height: 30%;
+    float: left;
+    border: 2px white solid;
+  }
+  #right{
+    height: 30%;
+    float: left;
+    background-color: yellow;
+    border:1px green solid;
+  }
+  #switchs{
+    width: 20px;
+    background-color: green;
+    float: left;
+    border:1px green solid; 
+  }
+  </style>
+</head>
+<body>
+   <div id="main">
+     <div id="left">×ó±ß</div>
+     <div id="switchs" onclick="switchs()">µã»÷×ó²àÀ¸ÉìËõ</div>
+     <div id="right">ÓÒ±ß</div>
+   </div>
+</body>
+</html>
+<script type="text/javascript">
+    var status = 1;
+    function switchs(){
+  var switchs=document.getElementById("switchs");
+  var left=document.getElementById("left");
+     if (1 == window.status){
+      window.status = 0;
+          left.style.display="none";
+     }
+     else{
+      window.status = 1;
+          left.style.display=""
+     }
+}
+
+</script>

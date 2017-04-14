@@ -1,0 +1,54 @@
+<!-- <html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul id="a">
+  <li>
+    <a id="b">Categories</a>
+    <ul style="display: none;">
+      <li>aaaaa</li>
+      <li>aaaaa</li>
+      <li>aaaaa</li>
+      <li>aaaaa</li>
+      <li>aaaaa</li>
+      <li>aaaaa</li>
+    </ul>
+  </li>
+</ul>
+
+</body> 
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  $('#b').click(function () {
+    if (!$(this).parent().hasClass('animate')) {
+      $(this).next().slideToggle();
+      // ( function () { 
+      // 	$(this).parent().removeClass('animate') 
+      // }).parent().addClass('animate');
+    }
+  })
+</script> -->
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".btn1").click(function(){
+  $("p").animate({left:"100px"}).style="display:none";
+  });
+  $(".btn2").click(function(){
+  $("p").animate({left:""});
+  });
+});
+</script>
+</head>
+<body>
+<button class="btn1">Animate</button>
+<button class="btn2">Reset</button>
+<div style="position:relative">
+<p style="background-color:yellow;width:100px;" >This is a paragraph.</p>
+</div>
+</body>
+</html>
